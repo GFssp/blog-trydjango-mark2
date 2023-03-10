@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Lista de Artigos</h1>
+  <ul>
+    {% for article in object_list %}
+      <li>
+        <h2>{{ article.title }}</h2>
+        <p>{{ article.content }}</p>
+      </li>
+    {% empty %}
+      <li>Nenhum artigo encontrado.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
